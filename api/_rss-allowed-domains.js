@@ -87,6 +87,7 @@ export default [
   "dev.events",
   "www.ycombinator.com",
   "a16z.com",
+  "www.a16z.news",
   "review.firstround.com",
   "www.sequoiacap.com",
   "www.nfx.com",
@@ -290,5 +291,17 @@ export default [
   "www.mining-technology.com",
   "www.australianmining.com.au",
   "news.goldseek.com",
-  "news.silverseek.com"
+  "news.silverseek.com",
+  "www.cbc.ca",
+  "www.theglobeandmail.com",
+  "nationalpost.com",
+  "www.thestar.com",
+  "www.ctvnews.ca",
+  "www.saltwire.com",
+  "www.canada.ca",
+  "weather.gc.ca",
+  "www.bankofcanada.ca",
+  "www150.statcan.gc.ca",
+  "www.rcmp-grc.gc.ca",
+  "novascotia.ca"
 ];
