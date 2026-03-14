@@ -1,4 +1,4 @@
-// Edge-compatible ESM wrapper for shared RSS allowed domains.
+// Edge-compatible ESM wrapper
 export default [
   "feeds.bbci.co.uk",
   "www.theguardian.com",
@@ -304,5 +304,31 @@ export default [
   "novascotia.ca",
   "halifax.citynews.ca",
   "globalnews.ca",
-  "www.halifaxexaminer.ca"
+  "www.halifaxexaminer.ca",
+  "www.macleans.ca",
+  "thenarwhal.ca",
+  "haligonia.ca",
+  "www.thechronicleherald.ca",
+  "atlanticbusinessmagazine.net",
+  "news.novascotia.ca",
+  "tc.canada.ca",
+  "feeds.washingtonpost.com",
+  "www.propublica.org",
+  "www.vox.com",
+  "www.nhc.noaa.gov",
+  "earthquake.usgs.gov",
+  "www.lawfaremedia.org",
+  "www.justsecurity.org",
+  "www.c4isrnet.com",
+  "www.carbonbrief.org",
+  "insideclimatenews.org",
+  "www.climatechangenews.com",
+  "www.metoffice.gov.uk",
+  "www.nasa.gov",
+  "maritime-executive.com",
+  "splash247.com",
+  "www.porttechnology.org",
+  "outbreaknewstoday.com",
+  "www.statnews.com",
+  "www.thelancet.com"
 ];
