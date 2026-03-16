@@ -27,6 +27,8 @@ export const VARIANT_FEEDS: Record<string, Record<string, ServerFeed[]>> = {
       { name: 'Politico', url: 'https://rss.politico.com/politics-news.xml' },
       { name: 'The Hill', url: 'https://thehill.com/news/feed' },
       { name: 'Axios', url: 'https://api.axios.com/feed/' },
+      { name: 'LA Times', url: gn('site:latimes.com when:1d') },
+      { name: 'USA Today', url: gn('site:usatoday.com when:1d') },
     ],
     europe: [
       { name: 'France 24', url: 'https://www.france24.com/en/rss' },
@@ -45,6 +47,9 @@ export const VARIANT_FEEDS: Record<string, Record<string, ServerFeed[]>> = {
       { name: 'Oman Observer', url: 'https://www.omanobserver.om/rssFeed/1' },
       { name: 'BBC Persian', url: 'https://feeds.bbci.co.uk/persian/rss.xml', lang: 'fa' },
       { name: 'The National', url: 'https://www.thenationalnews.com/arc/outboundfeeds/rss/?outputType=xml' },
+      { name: 'Daily Sabah', url: 'https://www.dailysabah.com/rssFeed/turkey' },
+      { name: 'Iraq News', url: gn('(Iraq OR Baghdad OR Kurdistan) when:2d') },
+      { name: 'Yemen News', url: gn('(Yemen OR Houthi OR Sanaa OR Aden) when:2d') },
     ],
     tech: [
       { name: 'Hacker News', url: 'https://hnrss.org/frontpage' },
@@ -83,6 +88,8 @@ export const VARIANT_FEEDS: Record<string, Record<string, ServerFeed[]>> = {
       { name: 'Africanews', url: 'https://www.africanews.com/feed/' },
       { name: 'Jeune Afrique', url: 'https://www.jeuneafrique.com/feed/', lang: 'fr' },
       { name: 'Premium Times', url: 'https://www.premiumtimesng.com/feed' },
+      { name: 'Daily Nation', url: gn('site:nation.africa Kenya when:2d') },
+      { name: 'Addis Standard', url: 'https://addisstandard.com/feed/' },
     ],
     latam: [
       { name: 'BBC Latin America', url: 'https://feeds.bbci.co.uk/news/world/latin_america/rss.xml' },
@@ -102,6 +109,9 @@ export const VARIANT_FEEDS: Record<string, Record<string, ServerFeed[]>> = {
       { name: 'South China Morning Post', url: gn('site:scmp.com when:2d') },
       { name: 'The Hindu', url: 'https://www.thehindu.com/feeder/default.rss' },
       { name: 'Asia News', url: gn('site:asianews.it when:3d') },
+      { name: 'Philippine Daily Inquirer', url: 'https://newsinfo.inquirer.net/feed' },
+      { name: 'Dawn', url: 'https://www.dawn.com/feeds/home' },
+      { name: 'Irrawaddy', url: 'https://www.irrawaddy.com/feed' },
     ],
     energy: [
       { name: 'Oil & Gas', url: gn('(oil price OR OPEC OR "natural gas" OR pipeline OR LNG) when:2d') },
@@ -124,6 +134,32 @@ export const VARIANT_FEEDS: Record<string, Record<string, ServerFeed[]>> = {
       { name: 'Layoffs.fyi', url: gn('tech+company+layoffs+announced') },
       { name: 'TechCrunch Layoffs', url: 'https://techcrunch.com/tag/layoffs/feed/' },
       { name: 'Layoffs News', url: gn('(layoffs OR "job cuts" OR "workforce reduction") when:3d') },
+    ],
+    canada: [
+      { name: 'CBC News', url: 'https://www.cbc.ca/cmlink/rss-topstories' },
+      { name: 'CBC Politics', url: 'https://www.cbc.ca/cmlink/rss-politics' },
+      { name: 'Globe and Mail', url: gn('site:theglobeandmail.com Canada') },
+      { name: 'National Post', url: 'https://nationalpost.com/feed' },
+      { name: 'CTV News', url: gn('site:ctvnews.ca') },
+      { name: 'Global News Halifax', url: 'https://globalnews.ca/halifax/feed/' },
+      { name: 'Canadian Press', url: gn('source:thecanadianpress.com') },
+    ],
+    climate: [
+      { name: 'Carbon Brief', url: 'https://www.carbonbrief.org/feed/' },
+      { name: 'Inside Climate News', url: 'https://insideclimatenews.org/feed/' },
+      { name: 'Climate Home News', url: 'https://www.climatechangenews.com/feed/' },
+    ],
+    maritime: [
+      { name: 'Maritime Executive', url: 'https://maritime-executive.com/rss' },
+      { name: 'Splash247', url: 'https://splash247.com/feed/' },
+    ],
+    security: [
+      { name: 'Lawfare', url: 'https://www.lawfaremedia.org/rss.xml' },
+      { name: 'Just Security', url: gn('site:justsecurity.org') },
+    ],
+    health_global: [
+      { name: 'Outbreak News', url: 'https://outbreaknewstoday.com/feed/' },
+      { name: 'STAT News', url: 'https://www.statnews.com/feed/' },
     ],
   },
 
@@ -403,6 +439,7 @@ export const VARIANT_FEEDS: Record<string, Record<string, ServerFeed[]>> = {
 
 export const INTEL_SOURCES: ServerFeed[] = [
   { name: 'Defense One', url: 'https://www.defenseone.com/rss/all/' },
+  { name: 'Breaking Defense', url: 'https://breakingdefense.com/feed/' },
   { name: 'The War Zone', url: 'https://www.twz.com/feed' },
   { name: 'Defense News', url: 'https://www.defensenews.com/arc/outboundfeeds/rss/?outputType=xml' },
   { name: 'Military Times', url: 'https://www.militarytimes.com/arc/outboundfeeds/rss/?outputType=xml' },
