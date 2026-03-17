@@ -194,6 +194,60 @@ export const SOURCE_TIERS: Record<string, number> = {
   'ProPublica': 2,
   'The Atlantic': 2,
   'Vox': 3,
+  // US Local
+  'USA Today': 2,
+  'LA Times': 2,
+  'Chicago Tribune': 2,
+  'Houston Chronicle': 2,
+  'Miami Herald': 2,
+  'Seattle Times': 2,
+  'Denver Post': 2,
+  'Atlanta Journal-Constitution': 2,
+  'Boston Globe': 2,
+  'Star Tribune': 2,
+  'Dallas Morning News': 2,
+  'Detroit Free Press': 2,
+  // European Local
+  'RTP Notícias': 2,
+  'Público': 2,
+  'Digi24': 2,
+  'HotNews': 2,
+  'iDNES': 2,
+  'Telex': 2,
+  'YLE News': 1,
+  'DR Nyheder': 1,
+  'NRK Nyheter': 1,
+  // Africa Local
+  'Daily Nation': 2,
+  'The Standard Kenya': 2,
+  'EWN': 2,
+  'IOL': 2,
+  'The East African': 2,
+  'Graphic Online': 2,
+  'Addis Standard': 3,
+  // LatAm Local
+  'RPP Noticias': 2,
+  'La Tercera': 2,
+  'El Nacional': 2,
+  'Central America News': 3,
+  // Asia Local
+  'Philippine Daily Inquirer': 2,
+  'Rappler': 2,
+  'Jakarta Post': 2,
+  'Malay Mail': 2,
+  'Dawn': 2,
+  'Daily Star BD': 2,
+  'Daily Mirror SL': 3,
+  'Irrawaddy': 2,
+  'NZ Herald': 2,
+  'RNZ News': 1,
+  // Middle East Local
+  'Daily Sabah': 2,
+  'Iraq News': 3,
+  'Daily Star Lebanon': 2,
+  'Yemen News': 3,
+  'Libya Observer': 3,
+  'Environment Canada Halifax': 1,
   'Canadian Press': 1,
   'Macleans': 2,
   'The Narwhal': 3,
@@ -550,6 +604,18 @@ const FULL_FEEDS: Record<string, Feed[]> = {
     { name: 'ProPublica', url: rss('https://www.propublica.org/feeds/propublica/main') },
     { name: 'The Atlantic', url: rss('https://feeds.feedburner.com/TheAtlantic') },
     { name: 'Vox', url: rss('https://www.vox.com/rss/index.xml') },
+    { name: 'USA Today', url: rss('https://rssfeeds.usatoday.com/usatoday-NewsTopStories') },
+    { name: 'LA Times', url: rss('https://www.latimes.com/world-nation/rss2.0.xml') },
+    { name: 'Chicago Tribune', url: rss('https://news.google.com/rss/search?q=site:chicagotribune.com+when:1d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'Houston Chronicle', url: rss('https://news.google.com/rss/search?q=site:houstonchronicle.com+when:1d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'Miami Herald', url: rss('https://news.google.com/rss/search?q=site:miamiherald.com+when:1d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'Seattle Times', url: rss('https://news.google.com/rss/search?q=site:seattletimes.com+when:1d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'Denver Post', url: rss('https://news.google.com/rss/search?q=site:denverpost.com+when:1d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'Atlanta Journal-Constitution', url: rss('https://news.google.com/rss/search?q=site:ajc.com+when:1d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'Boston Globe', url: rss('https://news.google.com/rss/search?q=site:bostonglobe.com+when:1d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'Star Tribune', url: rss('https://news.google.com/rss/search?q=site:startribune.com+Minneapolis+when:1d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'Dallas Morning News', url: rss('https://news.google.com/rss/search?q=site:dallasnews.com+when:1d&hl=en-US&gl=US&ceid=US:en') },
+    { name: 'Detroit Free Press', url: rss('https://news.google.com/rss/search?q=site:freep.com+when:1d&hl=en-US&gl=US&ceid=US:en') },
   ],
   canada: [
     { name: 'CBC News', url: rss('https://www.cbc.ca/cmlink/rss-topstories') },
@@ -574,7 +640,7 @@ const FULL_FEEDS: Record<string, Feed[]> = {
     { name: 'NS Power', url: rss('https://news.google.com/rss/search?q=NS+Power+outage+Nova+Scotia&hl=en-CA&gl=CA&ceid=CA:en') },
     { name: 'NS Health', url: rss('https://news.google.com/rss/search?q=Nova+Scotia+Health+EHS+hospital&hl=en-CA&gl=CA&ceid=CA:en') },
     { name: 'Atlantic Weather', url: rss('https://weather.gc.ca/rss/city/ns-19_e.xml') },
-    { name: 'Environment Canada NS', url: rss('https://weather.gc.ca/rss/warning/ns-19_e.xml') },
+    { name: 'Environment Canada Halifax', url: rss('https://weather.gc.ca/rss/warning/ns-19_e.xml') },
     { name: 'NRCan Earthquakes', url: rss('https://news.google.com/rss/search?q=earthquake+Canada&hl=en-CA&gl=CA&ceid=CA:en') },
     { name: 'Global News Halifax', url: rss('https://globalnews.ca/halifax/feed/') },
     { name: 'Halifax Examiner', url: rss('https://www.halifaxexaminer.ca/feed/') },
@@ -639,6 +705,22 @@ const FULL_FEEDS: Record<string, Feed[]> = {
     { name: 'SVT Nyheter', url: rss('https://www.svt.se/nyheter/rss.xml'), lang: 'sv' },
     { name: 'Dagens Nyheter', url: rss('https://www.dn.se/rss/'), lang: 'sv' },
     { name: 'Svenska Dagbladet', url: rss('https://www.svd.se/feed/articles.rss'), lang: 'sv' },
+    // Portuguese (PT)
+    { name: 'RTP Notícias', url: rss('https://www.rtp.pt/noticias/rss'), lang: 'pt' },
+    { name: 'Público', url: rss('https://feeds.feedburner.com/PublicoRSS'), lang: 'pt' },
+    // Romanian (RO)
+    { name: 'Digi24', url: rss('https://www.digi24.ro/rss'), lang: 'ro' },
+    { name: 'HotNews', url: rss('https://www.hotnews.ro/rss'), lang: 'ro' },
+    // Czech (CS)
+    { name: 'iDNES', url: rss('https://servis.idnes.cz/rss.aspx?c=zpravodaj'), lang: 'cs' },
+    // Hungarian (HU)
+    { name: 'Telex', url: rss('https://telex.hu/rss'), lang: 'hu' },
+    // Finnish (FI)
+    { name: 'YLE News', url: rss('https://feeds.yle.fi/uutiset/v1/recent.rss?publisherIds=YLE_UUTISET'), lang: 'fi' },
+    // Danish (DA)
+    { name: 'DR Nyheder', url: rss('https://www.dr.dk/nyheder/service/feeds/allenyheder'), lang: 'da' },
+    // Norwegian (NO)
+    { name: 'NRK Nyheter', url: rss('https://www.nrk.no/toppsaker.rss'), lang: 'no' },
     // Turkish (TR)
     { name: 'BBC Turkce', url: rss('https://feeds.bbci.co.uk/turkce/rss.xml'), lang: 'tr' },
     { name: 'DW Turkish', url: rss('https://rss.dw.com/xml/rss-tur-all'), lang: 'tr' },
@@ -680,6 +762,16 @@ const FULL_FEEDS: Record<string, Feed[]> = {
     { name: 'Asharq Business', url: rss('https://asharqbusiness.com/rss.xml') },
     { name: 'Asharq News', url: rss('https://asharq.com/snapchat/rss.xml'), lang: 'ar' },
     { name: 'Rudaw', url: rss('https://news.google.com/rss/search?q=site:rudaw.net+when:7d&hl=en&gl=US&ceid=US:en') },
+    // Turkey
+    { name: 'Daily Sabah', url: rss('https://www.dailysabah.com/rssFeed/turkey') },
+    // Iraq
+    { name: 'Iraq News', url: rss('https://news.google.com/rss/search?q=(Iraq+OR+Baghdad+OR+Kurdistan)+when:2d&hl=en-US&gl=US&ceid=US:en') },
+    // Lebanon
+    { name: 'Daily Star Lebanon', url: rss('https://news.google.com/rss/search?q=site:dailystar.com.lb+when:3d&hl=en-US&gl=US&ceid=US:en') },
+    // Yemen
+    { name: 'Yemen News', url: rss('https://news.google.com/rss/search?q=(Yemen+OR+Houthi+OR+Sanaa+OR+Aden)+when:2d&hl=en-US&gl=US&ceid=US:en') },
+    // Libya
+    { name: 'Libya Observer', url: rss('https://news.google.com/rss/search?q=site:libyaobserver.ly+when:3d&hl=en-US&gl=US&ceid=US:en') },
   ],
   tech: [
     { name: 'Hacker News', url: rss('https://hnrss.org/frontpage') },
@@ -765,6 +857,18 @@ const FULL_FEEDS: Record<string, Feed[]> = {
     { name: 'Channels TV', url: rss('https://www.channelstv.com/feed/') },
     { name: 'Daily Trust', url: rss('https://dailytrust.com/feed/') },
     { name: 'ThisDay', url: rss('https://www.thisdaylive.com/feed') },
+    // Kenya
+    { name: 'Daily Nation', url: rss('https://nation.africa/kenya/rss') },
+    { name: 'The Standard Kenya', url: rss('https://news.google.com/rss/search?q=site:standardmedia.co.ke+when:2d&hl=en-US&gl=US&ceid=US:en') },
+    // South Africa
+    { name: 'EWN', url: rss('https://ewn.co.za/RSS/Feeds/EWNHomePage.xml') },
+    { name: 'IOL', url: rss('https://news.google.com/rss/search?q=site:iol.co.za+when:1d&hl=en-US&gl=US&ceid=US:en') },
+    // East Africa
+    { name: 'The East African', url: rss('https://www.theeastafrican.co.ke/tea/rss') },
+    // Ghana
+    { name: 'Graphic Online', url: rss('https://news.google.com/rss/search?q=site:graphic.com.gh+when:2d&hl=en-US&gl=US&ceid=US:en') },
+    // Ethiopia
+    { name: 'Addis Standard', url: rss('https://addisstandard.com/feed/') },
   ],
   latam: [
     { name: 'Latin America', url: rss('https://news.google.com/rss/search?q=(Brazil+OR+Mexico+OR+Argentina+OR+Venezuela+OR+Colombia)+when:2d&hl=en-US&gl=US&ceid=US:en') },
@@ -788,6 +892,14 @@ const FULL_FEEDS: Record<string, Feed[]> = {
     // LatAm Security
     { name: 'InSight Crime', url: rss('https://insightcrime.org/feed/') },
     { name: 'France 24 LatAm', url: rss('https://www.france24.com/en/americas/rss') },
+    // Peru
+    { name: 'RPP Noticias', url: rss('https://rpp.pe/feed'), lang: 'es' },
+    // Chile
+    { name: 'La Tercera', url: rss('https://www.latercera.com/feed/'), lang: 'es' },
+    // Venezuela
+    { name: 'El Nacional', url: rss('https://news.google.com/rss/search?q=site:elnacional.com+Venezuela+when:2d&hl=es-419&gl=VE&ceid=VE:es-419'), lang: 'es' },
+    // Central America
+    { name: 'Central America News', url: rss('https://news.google.com/rss/search?q=(Guatemala+OR+Honduras+OR+"El+Salvador"+OR+Nicaragua+OR+"Costa+Rica"+OR+Panama)+when:2d&hl=en-US&gl=US&ceid=US:en') },
   ],
   asia: [
     { name: 'Asia News', url: rss('https://news.google.com/rss/search?q=(China+OR+Japan+OR+Korea+OR+India+OR+ASEAN)+when:2d&hl=en-US&gl=US&ceid=US:en') },
@@ -820,6 +932,24 @@ const FULL_FEEDS: Record<string, Feed[]> = {
     { name: 'Guardian Australia', url: rss('https://www.theguardian.com/australia-news/rss') },
     // Pacific Islands
     { name: 'Island Times (Palau)', url: rss('https://islandtimes.org/feed/') },
+    // Philippines
+    { name: 'Philippine Daily Inquirer', url: rss('https://newsinfo.inquirer.net/feed') },
+    { name: 'Rappler', url: rss('https://www.rappler.com/feed/') },
+    // Indonesia
+    { name: 'Jakarta Post', url: rss('https://www.thejakartapost.com/rss') },
+    // Malaysia
+    { name: 'Malay Mail', url: rss('https://www.malaymail.com/feed/rss/malaysia') },
+    // Pakistan
+    { name: 'Dawn', url: rss('https://www.dawn.com/feeds/home') },
+    // Bangladesh
+    { name: 'Daily Star BD', url: rss('https://www.thedailystar.net/frontpage/rss.xml') },
+    // Sri Lanka
+    { name: 'Daily Mirror SL', url: rss('https://news.google.com/rss/search?q=site:dailymirror.lk+when:2d&hl=en-US&gl=US&ceid=US:en') },
+    // Myanmar
+    { name: 'Irrawaddy', url: rss('https://www.irrawaddy.com/feed') },
+    // New Zealand
+    { name: 'NZ Herald', url: rss('https://www.nzherald.co.nz/arc/outboundfeeds/rss/curated/78/?outputType=xml') },
+    { name: 'RNZ News', url: rss('https://www.rnz.co.nz/rss/national.xml') },
   ],
   energy: [
     { name: 'Oil & Gas', url: rss('https://news.google.com/rss/search?q=(oil+price+OR+OPEC+OR+"natural+gas"+OR+pipeline+OR+LNG)+when:2d&hl=en-US&gl=US&ceid=US:en') },
@@ -1313,12 +1443,13 @@ export const SOURCE_REGION_MAP: Record<string, { labelKey: string; feedKeys: str
   // Full (geopolitical) variant regions
   worldwide: { labelKey: 'header.sourceRegionWorldwide', feedKeys: ['politics', 'crisis'] },
   us: { labelKey: 'header.sourceRegionUS', feedKeys: ['us', 'gov'] },
+  canada: { labelKey: 'header.sourceRegionCanada', feedKeys: ['canada'] },
   europe: { labelKey: 'header.sourceRegionEurope', feedKeys: ['europe'] },
   middleeast: { labelKey: 'header.sourceRegionMiddleEast', feedKeys: ['middleeast'] },
   africa: { labelKey: 'header.sourceRegionAfrica', feedKeys: ['africa'] },
   latam: { labelKey: 'header.sourceRegionLatAm', feedKeys: ['latam'] },
   asia: { labelKey: 'header.sourceRegionAsiaPacific', feedKeys: ['asia'] },
-  topical: { labelKey: 'header.sourceRegionTopical', feedKeys: ['energy', 'tech', 'ai', 'finance', 'layoffs', 'thinktanks'] },
+  topical: { labelKey: 'header.sourceRegionTopical', feedKeys: ['energy', 'tech', 'ai', 'finance', 'layoffs', 'thinktanks', 'climate', 'maritime', 'security', 'health_global'] },
   intel: { labelKey: 'header.sourceRegionIntel', feedKeys: [] },
 
   // Tech variant regions
@@ -1345,6 +1476,7 @@ export const SOURCE_REGION_MAP: Record<string, { labelKey: string; feedKeys: str
 export const INTEL_SOURCES: Feed[] = [
   // Defense & Security (Tier 1)
   { name: 'Defense One', url: rss('https://www.defenseone.com/rss/all/'), type: 'defense' },
+  { name: 'Breaking Defense', url: rss('https://breakingdefense.com/feed/'), type: 'defense' },
   { name: 'The War Zone', url: rss('https://www.twz.com/feed'), type: 'defense' },
   { name: 'Defense News', url: rss('https://www.defensenews.com/arc/outboundfeeds/rss/?outputType=xml'), type: 'defense' },
   { name: 'Janes', url: rss('https://news.google.com/rss/search?q=site:janes.com+when:3d&hl=en-US&gl=US&ceid=US:en'), type: 'defense' },
@@ -1396,6 +1528,7 @@ export const INTEL_SOURCES: Feed[] = [
 export const DEFAULT_ENABLED_SOURCES: Record<string, string[]> = {
   politics: ['BBC World', 'Guardian World', 'AP News', 'Reuters World', 'CNN World'],
   us: ['Reuters US', 'NPR News', 'PBS NewsHour', 'ABC News', 'CBS News', 'NBC News', 'Wall Street Journal', 'Politico', 'The Hill'],
+  canada: ['CBC News', 'CBC Politics', 'Globe and Mail', 'National Post', 'CTV News', 'Global News Halifax', 'Canadian Press'],
   europe: ['France 24', 'EuroNews', 'Le Monde', 'DW News', 'Tagesschau', 'ANSA', 'NOS Nieuws', 'SVT Nyheter'],
   middleeast: ['BBC Middle East', 'Al Jazeera', 'Al Arabiya', 'Guardian ME', 'BBC Persian', 'Iran International', 'Haaretz', 'Asharq News', 'The National'],
   africa: ['BBC Africa', 'News24', 'Africanews', 'Jeune Afrique', 'Africa News', 'Premium Times', 'Channels TV', 'Sahel Crisis'],
